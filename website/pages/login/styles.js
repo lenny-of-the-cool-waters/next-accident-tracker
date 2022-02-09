@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
- const useStyles = makeStyles((theme) => ({
+export default makeStyles((theme) => ({
     container: {
       height: "100vh",
       width: "100vw",
@@ -148,5 +148,3 @@ import { makeStyles } from "@mui/styles";
       },
     },
   }));
-
-  export default useStyles;
