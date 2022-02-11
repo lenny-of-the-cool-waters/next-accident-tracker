@@ -69,7 +69,7 @@ export const ResetPassword = (props) => {
             size="large"
             disabled={username.length === 0}
             onClick={() => {
-              console.log("reseting the password")
+              console.log("resetting the password")
             }}
           >
             Send Reset Link

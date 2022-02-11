@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Grid, CircularProcess, Typography, Button, TextField, Fade } from '@mui/material';
 
 import useStyles from './login/styles';
@@ -15,14 +16,14 @@ const Login = (props) => {
   const [error, setError] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [activeTab, setActiveTab] = useState("login");
-  const [username, setUsername] = useState("user");
+  const [username, setUsername] = useState("example@email.com");
   const [password, setPassword] = useState("Password1");
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
-        <img src={logo} alt="logo" className={classes.logotypeImage} />
+        <Image src={logo} alt="logo" className={classes.logotypeImage} />
         <Typography variant="h6" className={classes.logotypeText}>
           Minet Kenya
         </Typography>
@@ -33,7 +34,7 @@ const Login = (props) => {
             activeTab === "login" ?
             (
               <React.Fragment>
-                <Typography varian="h1" className={classes.greeting}>Login</Typography>
+                <Typography variant="h1" className={classes.greeting}>Login</Typography>
                 <Fade in={error}>
                   <Typography color="secondary" className={classes.errorMessage}> 
                     {errorMessage}
@@ -100,7 +101,7 @@ const Login = (props) => {
                         variant="contained"
                         color="primary"
                         size="large"
-                        onClick={() => setActiveTabId("reset")}
+                        onClick={() => setActiveTab("reset")}
                       >
                         Reset Password
                       </Button>
